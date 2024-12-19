@@ -1,0 +1,44 @@
+# Registro (log) iniciado em 2024-12-13 13:01
+# Gravação de sessão de comandos (note que, provavelmente, este registro
+# precisará ser editado para ser usado como um script).
+open \
+  C:\Users\joao.santos\Desktop\Projects\CODING\basic_eda\arthur\base_2.csv
+help
+genr date_nasc2 = 1899-12-30 + Data_nasc
+delete date_nasc2
+genr grupo_a = (grupo2 == "A")
+genr grupo_b = (grupo2 == "B")
+genr grupo_bc = (grupo2 != "A")
+# modelo 1
+ols Febre 0 grupo_bc
+# modelo 2
+ols Febre 0 grupo_a
+# modelo 3
+ols grupo_a 0 Febre
+# modelo 4
+ols grupo_a 0 Febre Taquic Taquip Sud Hiporexia Palidez Sangramento
+# modelo 5
+ols grupo_a 0 AmpicilinaSulbactam Bactrim Cefepime Cetoconazol Cipro \
+  Clofazimina Dapsona Fluconazol Imipinem Ivermectina Levofloxacina Mero \
+  Metronidazol Moxifloxacina Permetrina Vanco
+# modelo 6
+ols grupo_a 0 Sexo Idade Buscas_previas_saude Dias_inter
+# modelo 7
+ols grupo_a 0 Sexo Idade
+# modelo 8
+ols grupo_a 0 Sexo
+# modelo 9
+ols grupo_a 0 Idade
+# modelo 10
+ols grupo_a 0 Sexo Idade Temp_sint_dias Buscas_previas_saude Dias_inter
+# modelo 11
+ols grupo_a 0 Htc_D1 Hgb_D1 Htc_D30 Hgb_30 Leuc_D1 Leuc_D30 Neut_D1 \
+  Neut_D30 Plat_D1 Plat_D30 INR Ureia Creat AST ALT BT PT Albumina \
+  Globulina Triglicerides CT LDL HDL Ferritina VHS LDH Fibrinogenio PCR
+# modelo 12
+ols grupo_a 0 Htc_D1 Hgb_D1 Htc_D30 Hgb_30
+# modelo 13
+ols grupo_a 0 Leuc_D1 Leuc_D30 Neut_D1 Neut_D30 Plat_D1 Plat_D30
+# modelo 14
+ols grupo_a 0 INR Ureia Creat AST ALT BT PT Albumina Globulina \
+  Triglicerides CT LDL HDL Ferritina VHS LDH Fibrinogenio PCR
