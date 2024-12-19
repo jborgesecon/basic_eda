@@ -1,2 +1,3 @@
-var <- 'ola meu bom'
-print(var)
+message <- 'hello world'
+print(message)
+
